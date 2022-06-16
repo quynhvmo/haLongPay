@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "7d5cdf5e-67dd-442c-998e-68c5b4a851b7",
+		"name": "haLongPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/service/account/verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request_id\": \"request_id\",\r\n    \"partner_id\": \"partner_id\",\r\n    \"bank_no\": \"ABBANK\",\r\n    \"account_no\": \"account_no\",\r\n    \"account_type\": 1,\r\n    \"signature\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/service/account/verify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service",
+						"account",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/service/transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request_id\": \"request_id\",\r\n    \"partner_id\": \"partner_id\",\r\n    \"bank_no\": \"ABBANK\",\r\n    \"account_no\": \"account_no\",\r\n    \"account_type\": 1,\r\n    \"account_name\": \"ABBANK - NH An Binh\",\r\n    \"amount\": 100000,\r\n    \"content\": \"content12\",\r\n    \"signature\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/service/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/service/transfer/info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"request_id\": \"request_id\",\r\n    \"partner_id\": \"partner_id\",\r\n    \"transaction_id\": \"transaction_id\",\r\n    \"signature\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/service/transfer/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service",
+						"transfer",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
